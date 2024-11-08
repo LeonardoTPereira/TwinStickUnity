@@ -180,10 +180,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 206661099}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4320181e3f4467f4fa6ae16e02c7e289, type: 3}
+  m_Script: {fileID: 11500000, guid: ac047c742f770e84eba0b7ad563ee56d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <Speed>k__BackingField: 2
+  <Speed>k__BackingField: 5
 --- !u!61 &206661102
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -412,13 +412,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 206661099}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 65e6e3f001d7fa74a8f30d5c08b230ab, type: 3}
+  m_Script: {fileID: 11500000, guid: db5041caf6574464997c67479275f932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shootSpeed: 10
-  atkSpeed: 2
-  bulletSpawn: {fileID: 720524432}
-  bulletPrefab: {fileID: 2692394297130477637, guid: 3df774c4ff79a5442bf68251d6d9f4d2, type: 3}
+  <AttackSpeed>k__BackingField: 1
+  <BulletSpawn>k__BackingField: {fileID: 720524432}
+  <BulletPrefab>k__BackingField: {fileID: 2692394297130477637, guid: 3df774c4ff79a5442bf68251d6d9f4d2, type: 3}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0

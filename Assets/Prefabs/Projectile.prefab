@@ -154,10 +154,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 2692394297130477637}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f7bd01f5d9f838e4da3a0a2e1b78d357, type: 3}
+  m_Script: {fileID: 11500000, guid: c30bd5fed18f5f74f93dcccf4980be34, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 0
+  <Speed>k__BackingField: 5
+  <Damage>k__BackingField: 1
 --- !u!50 &4984509300260851890
 Rigidbody2D:
   serializedVersion: 4
