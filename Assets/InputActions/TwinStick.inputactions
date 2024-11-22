@@ -139,7 +139,7 @@
                     "path": "<Pointer>/delta",
                     "interactions": "",
                     "processors": "",
-                    "groups": ";Keyboard&Mouse;Touch",
+                    "groups": ";Touch",
                     "action": "Shoot",
                     "isComposite": false,
                     "isPartOfComposite": false
