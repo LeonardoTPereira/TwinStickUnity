@@ -18,8 +18,38 @@ public class ProjectileController : MonoBehaviour
 		Body = GetComponent<Rigidbody2D>();
 	}
 
-	public void Shoot(Vector2 direction)
+	public void Shoot(Vector2 direction, Vector2 playerMovement)
 	{
-		Body.AddForce(direction, ForceMode2D.Impulse);
+		StartCoroutine(ShootAfterStart(direction * Speed + playerMovement));
 	}
+
+	private IEnumerator ShootAfterStart(Vector2 direction)
+	{
+		yield return new WaitForEndOfFrame();
+        Body.AddForce(direction, ForceMode2D.Impulse);
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+		if(CompareTag("PlayerProjectile"))
+		{
+            if (collision.gameObject.CompareTag("Enemy"))
+            {
+                collision.gameObject.GetComponent<HealthController>().Hit(Damage);
+                Destroy(gameObject);
+            }
+        }
+        if (CompareTag("EnemyProjectile"))
+        {
+            if (collision.gameObject.CompareTag("Player"))
+            {
+                collision.gameObject.GetComponent<HealthController>().Hit(Damage);
+                Destroy(gameObject);
+            }
+        }
+		if (collision.gameObject.CompareTag("Block"))
+		{
+			Destroy(gameObject);
+		}
+    }
 }

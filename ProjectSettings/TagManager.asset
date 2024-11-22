@@ -4,11 +4,10 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Bullet
-  - EnemyBullet
   - Enemy
+  - PlayerProjectile
+  - EnemyProjectile
   - Block
-  - Shield
   layers:
   - Default
   - TransparentFX
@@ -43,15 +42,6 @@ TagManager:
   - 
   - 
   m_SortingLayers:
-  - name: Foreground
-    uniqueID: 219992275
-    locked: 0
-  - name: Bullets
-    uniqueID: 1372774491
-    locked: 0
   - name: Default
     uniqueID: 0
-    locked: 0
-  - name: Background
-    uniqueID: 188109145
     locked: 0

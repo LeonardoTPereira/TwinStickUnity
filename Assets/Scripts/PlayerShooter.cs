@@ -11,7 +11,6 @@ public class PlayerShooter : MonoBehaviour
 	private GameObject BulletSpawn { get; set; }
 	[field: SerializeField]
 	private GameObject BulletPrefab { get; set; }
-	private float ProjectileSpeed { get; set; }
 	private bool CanShoot { get; set; }
 	private bool IsHoldingShoot { get; set; }
 	private Rigidbody2D Body { get; set; }
@@ -26,11 +25,14 @@ public class PlayerShooter : MonoBehaviour
 	private void Awake()
 	{
 		CanShoot = true;
-		Body = GetComponent<Rigidbody2D>();
-
 	}
-	
-	public void OnShoot(InputAction.CallbackContext context)
+
+    private void Start()
+    {
+        Body = GetComponent<Rigidbody2D>();
+    }
+
+    public void OnShoot(InputAction.CallbackContext context)
 	{
 		if(context.performed)
 		{
@@ -63,9 +65,34 @@ public class PlayerShooter : MonoBehaviour
 
 	private BulletForceAndRotation GetBulletForceAndRotation(Vector2 projectileDirection)
 	{
+		const int rotationOffset = -45;
 		BulletForceAndRotation bulletForceAndRotation;
-		bulletForceAndRotation.Force = new Vector2(0, 1);
 		bulletForceAndRotation.Rotation = 0;
+		bulletForceAndRotation.Force = Vector2.zero;
+		if(projectileDirection.x > MinShootMagnitude)
+		{
+			bulletForceAndRotation.Rotation = 0 + rotationOffset;
+			bulletForceAndRotation.Force = new Vector2(1, 0);
+		}
+		else if (projectileDirection.x < -MinShootMagnitude)
+		{
+            bulletForceAndRotation.Rotation = 180 + rotationOffset;
+            bulletForceAndRotation.Force = new Vector2(-1, 0);
+        }
+        
+		if (Mathf.Abs(projectileDirection.x) - Mathf.Abs(projectileDirection.y) > 0) 
+			return bulletForceAndRotation;
+
+        if (projectileDirection.y > MinShootMagnitude)
+        {
+            bulletForceAndRotation.Rotation = 90 + rotationOffset;
+            bulletForceAndRotation.Force = new Vector2(0, 1);
+        }
+        else if (projectileDirection.y < -MinShootMagnitude)
+        {
+            bulletForceAndRotation.Rotation = 270 + rotationOffset;
+            bulletForceAndRotation.Force = new Vector2(0, -1);
+        }
 		return bulletForceAndRotation;
 	}
 
@@ -78,7 +105,7 @@ public class PlayerShooter : MonoBehaviour
 	{
 		var bullet = Instantiate(BulletPrefab, BulletSpawn.transform.position, BulletSpawn.transform.rotation);
 		var projectileController = bullet.GetComponent<ProjectileController>();
-		projectileController.Shoot(bulletForceAndRotation.Force + Body.velocity.normalized);
+		projectileController.Shoot(bulletForceAndRotation.Force, Body.velocity.normalized);
 	}
 
 	private float GetCooldown()
