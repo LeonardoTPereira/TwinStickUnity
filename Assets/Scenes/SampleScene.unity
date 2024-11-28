@@ -232,6 +232,31 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <MaxHealth>k__BackingField: 3
+--- !u!114 &537822997
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 537822977}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: daa69160a5414accaa838eb31bd82140, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &537822998
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 537822977}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4299b60ad0334394bf54c7542e2343cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <BloodParticle>k__BackingField: {fileID: 0}
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
@@ -668,6 +693,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4890259224583809731, guid: 976f115dfcbd0774d8303cb236af8850, type: 3}
       insertIndex: -1
       addedObject: {fileID: 5904268936055274342}
+    - targetCorrespondingSourceObject: {fileID: 4890259224583809731, guid: 976f115dfcbd0774d8303cb236af8850, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5904268936055274344}
+    - targetCorrespondingSourceObject: {fileID: 4890259224583809731, guid: 976f115dfcbd0774d8303cb236af8850, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5904268936055274343}
   m_SourcePrefab: {fileID: 100100000, guid: 976f115dfcbd0774d8303cb236af8850, type: 3}
 --- !u!1 &5904268936055274336 stripped
 GameObject:
@@ -717,6 +748,31 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &5904268936055274343
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5904268936055274336}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4299b60ad0334394bf54c7542e2343cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <BloodParticle>k__BackingField: {fileID: 0}
+--- !u!114 &5904268936055274344
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5904268936055274336}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: daa69160a5414accaa838eb31bd82140, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &7128600298119316341
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -776,6 +832,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7671592424846025458, guid: 3381e33a14afbfd48a1d87e43d73008e, type: 3}
       insertIndex: -1
       addedObject: {fileID: 537822989}
+    - targetCorrespondingSourceObject: {fileID: 7671592424846025458, guid: 3381e33a14afbfd48a1d87e43d73008e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 537822998}
+    - targetCorrespondingSourceObject: {fileID: 7671592424846025458, guid: 3381e33a14afbfd48a1d87e43d73008e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 537822997}
   m_SourcePrefab: {fileID: 100100000, guid: 3381e33a14afbfd48a1d87e43d73008e, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

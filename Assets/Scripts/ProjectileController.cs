@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class ProjectileController : MonoBehaviour
@@ -31,23 +30,14 @@ public class ProjectileController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-		if(CompareTag("PlayerProjectile"))
-		{
-            if (collision.gameObject.CompareTag("Enemy"))
-            {
-                collision.gameObject.GetComponent<HealthController>().Hit(Damage);
-                Destroy(gameObject);
-            }
+	    var collisionDirection = Vector3.Normalize(collision.gameObject.transform.position - gameObject.transform.position);
+		if((CompareTag("PlayerProjectile") && collision.gameObject.CompareTag("Enemy")) 
+		   || (CompareTag("EnemyProjectile") && collision.gameObject.CompareTag("Player")))
+		{ 
+			collision.gameObject.GetComponent<HealthController>().Hit(Damage, collisionDirection);
+            Destroy(gameObject);
         }
-        if (CompareTag("EnemyProjectile"))
-        {
-            if (collision.gameObject.CompareTag("Player"))
-            {
-                collision.gameObject.GetComponent<HealthController>().Hit(Damage);
-                Destroy(gameObject);
-            }
-        }
-		if (collision.gameObject.CompareTag("Block"))
+        if (collision.gameObject.CompareTag("Block"))
 		{
 			Destroy(gameObject);
 		}
