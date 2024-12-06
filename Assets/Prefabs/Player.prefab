@@ -46,6 +46,9 @@ GameObject:
   - component: {fileID: 2440228831867150101}
   - component: {fileID: 829771885528509781}
   - component: {fileID: 4566146443454556355}
+  - component: {fileID: 5468703296279431372}
+  - component: {fileID: 921164413157159173}
+  - component: {fileID: 6312194325992157532}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -89,7 +92,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -327,3 +330,42 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.9, y: 0.9}
   m_EdgeRadius: 0
+--- !u!114 &5468703296279431372
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7671592424846025458}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 586afeaf702a8b34ca59e503a5bf9b8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <MaxHealth>k__BackingField: 3
+  <InvincibilityCooldown>k__BackingField: 0
+--- !u!114 &921164413157159173
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7671592424846025458}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4299b60ad0334394bf54c7542e2343cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <BloodParticle>k__BackingField: {fileID: 0}
+--- !u!114 &6312194325992157532
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7671592424846025458}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: daa69160a5414accaa838eb31bd82140, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
