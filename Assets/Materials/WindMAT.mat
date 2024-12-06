@@ -21,7 +21,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: WindMAT
-  m_Shader: {fileID: -6465566751694194690, guid: f49d231c49c19fb499192624c0a89887, type: 3}
+  m_Shader: {fileID: -6465566751694194690, guid: a5ea65d176148064bb5c639ae425425b, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []

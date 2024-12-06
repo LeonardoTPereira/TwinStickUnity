@@ -6440,9 +6440,9 @@ Camera:
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
-    y: 0
-    width: 1
-    height: 1
+    y: 0.055555556
+    width: 0.33333334
+    height: 0.3333333
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 34
@@ -9918,7 +9918,7 @@ TilemapRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 1c30f15c20caa5745bd7715112f9cf54, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -10770,6 +10770,10 @@ PrefabInstance:
       propertyPath: m_SortingLayerID
       value: 753762747
       objectReference: {fileID: 0}
+    - target: {fileID: 2326204068016866238, guid: 976f115dfcbd0774d8303cb236af8850, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9b65c52d20d4649458814aa8f12593be, type: 2}
     - target: {fileID: 3760226011560377403, guid: 976f115dfcbd0774d8303cb236af8850, type: 3}
       propertyPath: m_LocalPosition.x
       value: 5.86
